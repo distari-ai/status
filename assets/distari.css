@@ -61,3 +61,12 @@ body {
 }
 a { color: #0079a2; }
 @media (prefers-color-scheme: dark) { a { color: #43aedc; } }
+
+/* Phones: Upptime's nav links carry 2rem side padding, which pushes the last link off
+   screen, and its response-time graph sits under the card text. The selectors outrank
+   Svelte's scoped single-class rules. */
+@media (max-width: 600px) {
+  nav a[href]:not(.logo) { padding: 1.25rem 0.75rem; }
+  nav a.logo[href] { margin-right: 0.75rem; }
+  section article.graph[style] { background-image: none; }
+}
