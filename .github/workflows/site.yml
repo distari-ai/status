@@ -1,5 +1,6 @@
 # Maintained by hand, not by Upptime's update-template: every action is pinned to a
 # commit SHA (the org requires it) and nothing updates itself. See CLAUDE.md.
+# Schedules register only on a push touching this file while Actions is on.
 # Builds @upptime/status-page at a pinned version (the same steps as uptime-monitor's
 # "site" command) and publishes it with GitHub Pages' own deploy action.
 name: Static Site CI

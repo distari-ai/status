@@ -1,5 +1,6 @@
 # Maintained by hand, not by Upptime's update-template: every action is pinned to a
 # commit SHA (the org requires it) and nothing updates itself. See CLAUDE.md.
+# Schedules register only on a push touching this file while Actions is on.
 name: Response Time CI
 on:
   schedule:
