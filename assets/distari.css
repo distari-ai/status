@@ -68,5 +68,5 @@ a { color: #0079a2; }
 @media (max-width: 600px) {
   nav a[href]:not(.logo) { padding: 1.25rem 0.75rem; }
   nav a.logo[href] { margin-right: 0.75rem; }
-  section article.graph[style] { background-image: none; }
+  article.graph { background-image: none !important; }
 }
