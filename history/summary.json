@@ -2,7 +2,7 @@
   {
     "name": "Website",
     "url": "https://distari.com/",
-    "icon": "https://icons.duckduckgo.com/ip3/distari.com.ico",
+    "icon": "https://status.distari.com/icon-192.png",
     "slug": "website",
     "status": "up",
     "uptime": "100.00%",
@@ -20,7 +20,7 @@
   {
     "name": "Web app",
     "url": "https://distari.com/app.html",
-    "icon": "https://icons.duckduckgo.com/ip3/distari.com.ico",
+    "icon": "https://status.distari.com/icon-192.png",
     "slug": "web-app",
     "status": "up",
     "uptime": "100.00%",
@@ -38,7 +38,7 @@
   {
     "name": "API",
     "url": "https://api.distari.com/public/docs",
-    "icon": "https://icons.duckduckgo.com/ip3/api.distari.com.ico",
+    "icon": "https://status.distari.com/icon-192.png",
     "slug": "api",
     "status": "up",
     "uptime": "100.00%",
@@ -55,20 +55,22 @@
   },
   {
     "name": "Rehearsal check (not a real service)",
-    "url": "https://api.distari.com/public/docs-rehearsal-1183",
-    "icon": "https://icons.duckduckgo.com/ip3/api.distari.com.ico",
+    "url": "https://api.distari.com/public/docs",
+    "icon": "https://status.distari.com/icon-192.png",
     "slug": "rehearsal-check",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 64,
-    "timeDay": 64,
-    "timeWeek": 64,
-    "timeMonth": 64,
-    "timeYear": 64,
-    "dailyMinutesDown": {}
+    "status": "up",
+    "uptime": "14.35%",
+    "uptimeDay": "14.35%",
+    "uptimeWeek": "14.35%",
+    "uptimeMonth": "14.35%",
+    "uptimeYear": "14.35%",
+    "time": 70,
+    "timeDay": 70,
+    "timeWeek": 70,
+    "timeMonth": 70,
+    "timeYear": 70,
+    "dailyMinutesDown": {
+      "2026-11-04": 2
+    }
   }
 ]
