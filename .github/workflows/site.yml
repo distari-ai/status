@@ -12,7 +12,7 @@ on:
       - "assets/**"
       - ".github/workflows/site.yml"
   schedule:
-    - cron: "0 1 * * *"
+    - cron: "29 1 * * *"
   repository_dispatch:
     types: [static_site]
   workflow_dispatch:
