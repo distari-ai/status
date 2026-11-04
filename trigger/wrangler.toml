@@ -12,8 +12,8 @@ preview_urls = false
 crons = ["*/5 * * * *"]
 
 [vars]
-GH_APP_CLIENT_ID = "REPLACE_WITH_CLIENT_ID"
-GH_APP_INSTALLATION_ID = "REPLACE_WITH_INSTALLATION_ID"
+GH_APP_CLIENT_ID = "Iv23li46VYi2sXyo9vmn"
+GH_APP_INSTALLATION_ID = "178500757"
 
 [observability]
 enabled = true
