@@ -52,25 +52,5 @@
     "timeMonth": 156,
     "timeYear": 156,
     "dailyMinutesDown": {}
-  },
-  {
-    "name": "Rehearsal check (not a real service)",
-    "url": "https://api.distari.com/public/docs",
-    "icon": "https://status.distari.com/icon-192.png",
-    "slug": "rehearsal-check",
-    "status": "up",
-    "uptime": "14.35%",
-    "uptimeDay": "14.35%",
-    "uptimeWeek": "14.35%",
-    "uptimeMonth": "14.35%",
-    "uptimeYear": "14.35%",
-    "time": 70,
-    "timeDay": 70,
-    "timeWeek": 70,
-    "timeMonth": 70,
-    "timeYear": 70,
-    "dailyMinutesDown": {
-      "2026-11-04": 2
-    }
   }
 ]
