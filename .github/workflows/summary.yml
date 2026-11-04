@@ -1,0 +1,28 @@
+# Maintained by hand, not by Upptime's update-template: every action is pinned to a
+# commit SHA (the org requires it) and nothing updates itself. See CLAUDE.md.
+name: Summary CI
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  repository_dispatch:
+    types: [summary]
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.repository }}-upptime
+  cancel-in-progress: false
+permissions:
+  contents: write
+  issues: write
+jobs:
+  run:
+    name: Summary CI
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: upptime/uptime-monitor@74f0683383384927e064d76a5f21f340d6af36fc # v1.46.5
+        with:
+          command: "readme"
+        env:
+          GH_PAT: ${{ github.token }}
+          SECRETS_CONTEXT: "{}"

@@ -1,0 +1,63 @@
+/* Distari palette for the Upptime status page: the public site's paper, ink and blue
+   (site/src/styles/global.css) with the app's status colours (assets/tokens/tokens.json). */
+:root {
+  --body-background-color: #f6f5f4;
+  --body-text-color: #242322;
+  --card-background-color: #ffffff;
+  --nav-background-color: #f6f5f4;
+  --nav-border-bottom-color: #d8d7d6;
+  --nav-current-border-bottom-color: #0691c1;
+  --card-border-color: #eae9e8;
+  --down-border-left-color: #9b2c2c;
+  --down-background-color: #fbeaea;
+  --degraded-border-left-color: #8a6d1f;
+  --up-border-left-color: #2f6b4f;
+  --tag-color: #ffffff;
+  --tag-up-background-color: #2f6b4f;
+  --tag-down-background-color: #9b2c2c;
+  --tag-degraded-background-color: #8a6d1f;
+  --change-background-color: #8a6d1f;
+  --error-button-border-color: #006486;
+  --error-button-background-color: #0079a2;
+  --error-button-color: #ffffff;
+  --submit-button-border-color: #006486;
+  --submit-button-background-color: #0079a2;
+  --submit-button-color: #ffffff;
+  --graph-opacity: 1;
+  --graph-filter: none;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background-color: #15171a;
+    --body-text-color: #f1f3f5;
+    --card-background-color: #1d2024;
+    --nav-background-color: #15171a;
+    --nav-border-bottom-color: #3b424a;
+    --nav-current-border-bottom-color: #43aedc;
+    --card-border-color: #30353b;
+    --down-border-left-color: #f08c8c;
+    --down-background-color: #3b2023;
+    --degraded-border-left-color: #e4c36a;
+    --up-border-left-color: #78c69a;
+    --tag-color: #15171a;
+    --tag-up-background-color: #78c69a;
+    --tag-down-background-color: #f08c8c;
+    --tag-degraded-background-color: #e4c36a;
+    --change-background-color: #e4c36a;
+    --error-button-border-color: #43aedc;
+    --error-button-background-color: #43aedc;
+    --error-button-color: #15171a;
+    --submit-button-border-color: #43aedc;
+    --submit-button-background-color: #43aedc;
+    --submit-button-color: #15171a;
+    --graph-opacity: 1;
+    --graph-filter: none;
+  }
+}
+body {
+  font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #0079a2; }
+@media (prefers-color-scheme: dark) { a { color: #43aedc; } }

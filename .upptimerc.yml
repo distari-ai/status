@@ -1,0 +1,54 @@
+# Distari's status page (status.distari.com). Read CLAUDE.md before changing anything.
+owner: distari-ai
+repo: status
+
+# Only database-free, unauthenticated endpoints. Never /health (it wakes Neon) or
+# protected /docs (a signed-out 401 is not an outage).
+sites:
+  - name: Website
+    slug: website
+    url: https://distari.com/
+    maxResponseTime: 20000
+  - name: Web app
+    slug: web-app
+    url: https://distari.com/app.html
+    maxResponseTime: 20000
+  - name: API
+    slug: api
+    url: https://api.distari.com/public/docs
+    maxResponseTime: 20000
+
+# Automatic incident issues are assigned to both founders, so GitHub notifies them too.
+assignees:
+  - ivantha
+  - sumedhe
+
+skipDescriptionUpdate: true
+skipTopicsUpdate: true
+skipHomepageUpdate: true
+# Keep every incident issue, including short ones, as the public record.
+skipDeleteIssues: true
+
+commitMessages:
+  commitAuthorName: "github-actions[bot]"
+  commitAuthorEmail: "41898282+github-actions[bot]@users.noreply.github.com"
+
+status-website:
+  cname: status.distari.com
+  name: Distari status
+  logoUrl: https://status.distari.com/logo.svg
+  logoHref: https://status.distari.com/
+  favicon: https://status.distari.com/icon-192.png
+  faviconSvg: https://status.distari.com/favicon.svg
+  themeUrl: https://status.distari.com/distari.css
+  introTitle: "Distari service status"
+  introMessage: "Checked every five minutes from outside Distari's own servers. The Distari team posts incidents and updates here. Need help? Email [support@distari.com](mailto:support@distari.com)."
+  navbar:
+    - title: Status
+      href: /
+    - title: Distari
+      href: https://distari.com/
+  robotsText: "User-agent: *\nAllow: /\n"
+  metaTags:
+    - name: description
+      content: "Live status of the Distari website, web app and API, with incident updates from the Distari team."

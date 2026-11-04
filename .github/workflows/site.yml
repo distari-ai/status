@@ -1,0 +1,61 @@
+# Maintained by hand, not by Upptime's update-template: every action is pinned to a
+# commit SHA (the org requires it) and nothing updates itself. See CLAUDE.md.
+# Builds @upptime/status-page at a pinned version (the same steps as uptime-monitor's
+# "site" command) and publishes it with GitHub Pages' own deploy action.
+name: Static Site CI
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".upptimerc.yml"
+      - "assets/**"
+      - ".github/workflows/site.yml"
+  schedule:
+    - cron: "0 1 * * *"
+  repository_dispatch:
+    types: [static_site]
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.repository }}-pages
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "20"
+      - name: Build the status page
+        run: |
+          mkdir site && cd site
+          npm init -y > /dev/null
+          npm i @upptime/status-page@1.17.0 --no-audit --no-fund --loglevel=error
+          cp -r node_modules/@upptime/status-page/* .
+          npm i --no-audit --no-fund --loglevel=error
+          npm run export
+          cp -r ../assets/* __sapper__/export/
+          test -f __sapper__/export/index.html
+          test "$(cat __sapper__/export/CNAME)" = "status.distari.com"
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: site/__sapper__/export
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
