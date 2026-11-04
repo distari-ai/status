@@ -7,20 +7,24 @@ repo: status
 sites:
   - name: Website
     slug: website
+    icon: https://status.distari.com/icon-192.png
     url: https://distari.com/
     maxResponseTime: 20000
   - name: Web app
     slug: web-app
+    icon: https://status.distari.com/icon-192.png
     url: https://distari.com/app.html
     maxResponseTime: 20000
   - name: API
     slug: api
+    icon: https://status.distari.com/icon-192.png
     url: https://api.distari.com/public/docs
     maxResponseTime: 20000
   # Temporary #1183 rehearsal check: a path that always answers 404.
   - name: Rehearsal check (not a real service)
     slug: rehearsal-check
-    url: https://api.distari.com/public/docs-rehearsal-1183
+    icon: https://status.distari.com/icon-192.png
+    url: https://api.distari.com/public/docs
     maxResponseTime: 20000
 
 # Automatic incident issues are assigned to both founders, so GitHub notifies them too.
