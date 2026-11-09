@@ -40,17 +40,17 @@
     "url": "https://api.distari.com/public/docs",
     "icon": "https://status.distari.com/icon-192.png",
     "slug": "api",
-    "status": "up",
+    "status": "down",
     "uptime": "99.82%",
     "uptimeDay": "98.97%",
     "uptimeWeek": "99.82%",
     "uptimeMonth": "99.82%",
     "uptimeYear": "99.82%",
-    "time": 155,
-    "timeDay": 135,
-    "timeWeek": 155,
-    "timeMonth": 155,
-    "timeYear": 155,
+    "time": 148,
+    "timeDay": 121,
+    "timeWeek": 148,
+    "timeMonth": 148,
+    "timeYear": 148,
     "dailyMinutesDown": {
       "2026-11-09": 15
     }
